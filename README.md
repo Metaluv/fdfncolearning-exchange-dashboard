@@ -1,97 +1,92 @@
-# Co-learning Exchange Dashboard
+# Co-Learning Exchange Dashboard - Flying Dust First Nation
 
-A comprehensive event management dashboard for the Co-learning Exchange at Flying Dust First Nation, Waters Edge Eco Lodge, Meadow Lake Provincial Park, Saskatchewan.
+A comprehensive dashboard for managing the Co-Learning Exchange event hosted by Flying Dust First Nation (June 10-14, 2025).
 
 ## Features
 
-### 📊 Dashboard Overview
-- Real-time participant statistics
-- Organization breakdown with visual charts
-- Financial summary with dynamic calculations
-- Accommodation occupancy tracking
+- **Participant Management**: Track 35 participants from 7 organizations
+- **Accommodation Tracking**: Manage 24 room assignments
+- **Financial Summary**: Real-time revenue calculations with GST/PST
+- **Event Agenda**: 5-day detailed schedule with meal descriptions
+- **Menu Planning**: Complete meal details including costs
+- **Health & Safety**: Track certifications and dietary requirements
+- **Export Capabilities**: Generate PDFs for participants, menus, and agendas
+- **Invoice Generation**: Create organization-specific invoices
 
-### 👥 Participant Management
-- Complete participant listing with search and filter
-- Individual participant profiles
-- Editable participant information
-- Health & safety tracking (dietary requirements, allergies, certifications)
-
-### 🏨 Accommodation Management
-- Room assignment tracking
-- Occupancy visualization
-- Room type categorization (Cabins, Hotel Rooms, Glamping Tents)
-- 15% discount on all room rates
-
-### 💰 Financial Tracking
-- Automated invoice generation with PDF export
-- Organization-based billing
-- Financial calculations include:
-  - 15% room discount
-  - 15% gratuity (on accommodation and meals only)
-  - GST (5%) and PST (6%)
-  - Presenter & Community Honorarium ($250/participant)
-
-### 📅 Event Management
-- 5-day event agenda (June 10-14, 2025)
-- Editable daily schedules
-- Menu planning with cost tracking
-- Weather forecast integration
-- Fire ban status monitoring
-
-### 🍽️ Menu & Catering
-- Daily meal planning
-- Cost calculations per meal
-- Updated pricing: Lunches $15/day, Suppers $30/day
-- Special dietary accommodation tracking
-
-## Technical Details
-
-- **Built with**: HTML5, Tailwind CSS, Vanilla JavaScript
-- **Libraries**: Chart.js for visualizations, jsPDF for invoice generation
-- **Storage**: LocalStorage for data persistence
-- **Responsive**: Mobile and desktop optimized
-
-## Key Financial Formulas
+## Project Structure
 
 ```
-Room Cost = Base Rate × Nights × 0.85 (15% discount)
-Gratuity = (Discounted Room Cost + Meals) × 0.15
-Subtotal = Room + Meals + Honorarium + Gratuity
-Total = Subtotal × 1.11 (GST + PST)
+fdfncolearning-exchange-dashboard/
+├── index.html              # Main dashboard application
+├── invoice-sample.html     # Invoice template and generator
+├── README.md              # This file
+├── room-discount-summary.md # Room pricing documentation
+├── css/
+│   └── styles.css         # Custom styles and animations
+└── js/
+    └── data/              # Data files (for future modularization)
+        ├── constants.js   # Financial constants (GST, PST, etc.)
+        ├── menuData.js    # Menu items and costs
+        ├── agendaData.js  # Event schedule
+        └── attendanceData.js # Participants and accommodations
 ```
 
-## Usage
+## How to Use
 
-1. Open `index.html` in a modern web browser
-2. Navigate using the sidebar menu
-3. Click participant names or organizations for detailed profiles
-4. Use the edit buttons to modify data
-5. Generate invoices from the Organizations tab
+1. **Open the Dashboard**: Simply open `index.html` in a modern web browser
+2. **Navigate Sections**: Use the sidebar to access different features
+3. **Edit Data**: Click "Edit" buttons to modify information
+4. **Export Data**: Use export buttons to generate PDFs or download JSON data
 
-## Data Structure
+## Key Information
 
-The dashboard uses embedded JSON data for:
-- 35 participants across 7 organizations
-- 24 accommodation units
-- 5-day agenda with activities
-- Menu items with individual costs
+### Event Details
+- **Dates**: June 10-14, 2025
+- **Location**: Flying Dust First Nation, Meadow Lake
+- **Participants**: 35 from 7 organizations
+- **Accommodations**: 24 rooms (cabins and glamping)
 
-## Recent Updates
+### Financial Constants
+- **GST**: 5%
+- **PST**: 6%
+- **Gratuity**: 15% (on accommodations and food service)
+- **Room Discount**: 15%
+- **Honorarium**: $250 per participant
 
-- Added 15% discount on all room rates
-- Fixed financial calculation consistency across all tabs
-- Implemented comprehensive search functionality
-- Added participant and organization profile modals
-- Updated meal pricing (Lunches: $15, Suppers: $30)
-- Fixed JavaScript errors and data loading issues
+### Meals Included
+All meals are now displayed with full descriptions in the agenda:
+- Welcome Supper (NY Steak Buffet)
+- Daily Continental Breakfast
+- Bagged Lunches
+- Traditional Bison Feast
+- Shore Lunch
+- Closing Feast
 
 ## Browser Compatibility
 
-- Chrome (recommended)
+Works best with modern browsers:
+- Chrome/Edge (recommended)
 - Firefox
 - Safari
-- Edge
 
-## License
+## Data Updates
 
-This project is proprietary to Flying Dust First Nation.
+To update event data in the future:
+1. The `js/data/` folder contains extracted data files
+2. These can be edited separately and integrated later
+3. Currently, all data is embedded in `index.html` for simplicity
+
+## Local Storage
+
+The dashboard uses browser local storage to save:
+- Menu modifications
+- Agenda changes
+- Sidebar state
+
+## Support
+
+For questions or issues, contact the Flying Dust First Nation event coordinator.
+
+---
+
+Built with Tailwind CSS, Chart.js, and jsPDF
